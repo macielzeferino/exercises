@@ -9,8 +9,10 @@ if(question == "nao") {
   alert("Vejo que ainda não visitou nenhuma cidade, quando visitar venha compartilhar")
 }
 while (question === "sim") {
-  citiesVisited = prompt("Qual o nome da cidade ?")
+  let cityVisited = prompt("Qual o nome da cidade ?")
+  citiesVisited += `\n${cityVisited}`
   citiesCount++
   question = prompt("Visitou mais alguma cidade ?")
-  alert(`Show !, ${touristName}`)
 }
+alert(`Show !, ${touristName}, você visitou ${citiesCount}, nas quais foram
+       ${citiesVisited}`)
